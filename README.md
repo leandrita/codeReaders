@@ -1,6 +1,6 @@
 
 _____________________
-# <p align="center"> 📚: coderReaders 📚:
+# <p align="center"> 📚 coderReaders 📚
 
 
   <p align="center">
@@ -15,14 +15,6 @@ La biblioteca de nuestro barrio se quiere modernizar y necesita tener todos sus 
 ## Descripción
 
 
-
-## Equipo
-
-        Neema - Product Owner y Developer
-        Leandra - Scrum Master y Developer
-        Ana Lucía Silva Córdoba- Developer
-        Rosa Rubio - Developer
-        Rosmary - Developer
 ## Diseño
 #### Desktop
 
@@ -50,7 +42,14 @@ La biblioteca de nuestro barrio se quiere modernizar y necesita tener todos sus 
 <img src="https://w7.pngwing.com/pngs/115/721/png-transparent-trello-social-icons-icon.png" alt="trello" width="30" heigth="30"/>
  <img src="https://1000marcas.net/wp-content/uploads/2020/01/logo-Canva.png" alt="Canva" width="40" heigth="40"/>
 
+## Equipo
 
-_____________________________
+        Neema - Product Owner y Developer (bneemanelly@gmail.com)
+        Leandra - Scrum Master y Developer (lea.bujh@gmail.com)
+        Ana Lucía Silva Córdoba- Developer (coderalsc@gmail.com)
+        Rosa Rubio - Developer (rosamrubio@gmail.com)
+        Rosmary Medina- Developer (rousmedina21@gmail.com)
+
+____________________________
 
 
