@@ -2,87 +2,119 @@
 <html>
 <head>
     <title>Biblioteca PHP</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo dirname($_SERVER['PHP_SELF']); ?>/frontend/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="view/css/style.css">
 </head>
 <body>
-    <header>
-        <div>
-            <img class="logo" src="frontend/assests/logo.png">
-        </div>
-        <nav class="nav-links">
-            <a href="#">INICIO</a>
-            <a href="#" onclick="abrirModal()">CREAR</a>
-        </nav>
-        <div class="search-bar">
-            <input type="text" class="search-input" placeholder="Realice su búsqueda...">
-            <button class="search-button">Buscar</button>
+<header>
+        <div class="container">
+            <nav class="navbar navbar-expand-md">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="../view/assests/logo.png" alt="Logo" width="150" height="150">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="abrirModal()">CREAR</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </header>
-    <main>
-        <table>
-            <tr>
-                <th>Título:</th>
-                <th>Autor:</th>
-                <th>Descripción:</th>
-                <th>ISBN:</th>
-            </tr>
-             <?php
-                $numLibros = 15;
-                for ($i = 1; $i <= $numLibros; $i++) {
-                    echo "<tr>";
-                    echo "<td>Libro $i</td>";
-                    echo "<td>Autor $i</td>";
-                    echo "<td>Descripción:</td>";
-                    echo "<td>ISBN: $i</td>";
-                    echo "<td>";
-                    echo "<button class='btn'>Editar</button>";
-                    echo "<button class='btn-e'>Eliminar</button>";
-                    echo "<button class='btn'>+Info</button>";
-                    echo "</td>";
-                    echo "</tr>";
-                }
-              ?>
 
-        </table>
+    <main>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Título:</th>
+                        <th>Autor:</th>
+                        <th>Descripción:</th>
+                        <th>ISBN:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $numLibros = 15;
+                    for ($i = 1; $i <= $numLibros; $i++) {
+                        echo "<tr>";
+                        echo "<td>Libro $i</td>";
+                        echo "<td>Autor $i</td>";
+                        echo "<td>Descripción:</td>";
+                        echo "<td>ISBN: $i</td>";
+                        echo "<td>";
+                        echo "<button class='btn btn-primary'>Editar</button>";
+                        echo "<button class='btn btn-danger'>Eliminar</button>";
+                        echo "<button class='btn btn-info'>+Info</button>";
+                        echo "</td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
 
         <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="cerrarModal()">&times;</span>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">CREAR LIBRO</h2>
+                <button type="button" class="close" onclick="cerrarModal()">&times;</button>
+            </div>
+            <div class="modal-body">
                 <form action="controladores/registro.php" method="post">
-                    <h2>CREAR LIBRO</h2>
-                    <label for="titulo">Titulo:</label><br>
-                    <input type="text" name="titulo" required><br>
-                    <label for="autor">Autor:</label><br>
-                    <input type="text" name="autor" required><br>
-                    <label for="descripcion">Descripción:</label><br>
-                    <textarea name="descripcion" required></textarea><br>
-                    <label for="isbn">ISBN:</label><br>
-                    <input type="text" name="isbn" required><br>
-                    <label for="imagen">Imagen del libro (URL):</label><br>
-                    <input type="url" name="imagen"><br>
+                    <div class="form-group">
+                        <label for="titulo">Titulo:</label>
+                        <input type="text" class="form-control" name="titulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="autor">Autor:</label>
+                        <input type="text" class="form-control" name="autor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea class="form-control" name="descripcion" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn">ISBN:</label>
+                        <input type="text" class="form-control" name="isbn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagen">Imagen del libro (URL):</label>
+                        <input type="url" class="form-control" name="imagen">
+                    </div>
                     <button type="submit" class="btn btn-danger btn-lg">Registrar</button>
                 </form>
             </div>
         </div>
-        </div>
+    </div>
+</div>
 
-        <script>
-
-            function abrirModal() {
-                document.getElementById("myModal").style.display = "block";
-            }
-
-
-            function cerrarModal() {
-                document.getElementById("myModal").style.display = "none";
-            }
-        </script>
     </main>
 
     <footer>
-        @2023 - Todos los derechos reservados - CodeReaders
+        <div class="container">
+            @2023 - Todos los derechos reservados - CodeReaders
+        </div>
     </footer>
 
-    <script src="frontend/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function abrirModal() {
+            $("#myModal").modal("show");
+        }
+
+        function cerrarModal() {
+            $("#myModal").modal("hide");
+        }
+    </script>
 </body>
 </html>
