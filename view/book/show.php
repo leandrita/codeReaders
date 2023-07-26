@@ -59,7 +59,7 @@ $date = $obj->show($_GET['id']);
                 <?= $date[3] ?>
             </td>
             <td scope=" col">
-                <?= $date[4] ?>
+                <?= $date[5] ?>
             </td>
         </tr>
     </tbody>

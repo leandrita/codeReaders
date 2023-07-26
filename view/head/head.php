@@ -28,8 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="/codeReaders/index.php">Inicio</a>
-                        <a class="nav-link" href="/codeReaders/view/book/index.php">Libros</a>
-                        <a class="nav-link" href="/codeReaders/view/book/create.php">Agregar nuevos libros</a>
+                        <a class="nav-link" href="/codeReaders/view/book/create.php">Crear</a>
                     </div>
                 </div>
             </div>
