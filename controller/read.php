@@ -24,7 +24,7 @@
       <h6 class="card-subtitle mb-2 text-muted"><?php echo $row['autor']; ?></h6>
       <p class="card-text"><?php echo $row['descripción']; ?></p>
       <h6 class="card-subtitle mb-2 text-muted">ISBN: <?php echo $row['ISBN']; ?></h6>
-      <a href="#" class="btn btn-primary">Editar</a>
+      <a href="../view/edit_form.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Editar</a>
       <a href="#" class="btn btn-primary">Eliminar</a>
       <a href="#" class="btn btn-primary">+Info</a>
     </div>
