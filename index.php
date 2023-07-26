@@ -8,38 +8,30 @@ require_once("/Applications/MAMP/htdocs/codeReaders/controller/BookController.ph
 $obj = new controller();
 $rows = $obj->index();
 ?>
-<div class="mb-3">
-    <a href="/codeReaders/view/book/create.php" class="btn btn-primary">Agregar nuevo
-        libro</a>
-
-</div>
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Título</th>
-            <th scope="col">Autor</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php if ($rows): ?>
-            <?php foreach ($rows as $row): ?>
-                <tr>
-                    <th>
-                        <?= $row[0] ?>
-                    </th>
-                    <th>
-                        <?= $row[1] ?>
-                    </th>
-                    <th>
-                        <?= $row[2] ?>
-                    </th>
-                    <th>
-                        <a href="/codeReaders/view/book/show.php?id=<?= $row[0] ?>" class="btn btn-primary">+ Info</a>
-                        <a href="/codeReaders/view/book/edit.php?id=<?= $row[0] ?>" class="btn btn-success">Editar</a>
-                        <!-- Button trigger modal -->
-                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
-
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Título</th>
+                <th scope="col">Autor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php if ($rows): ?>
+                <?php foreach ($rows as $row): ?>
+                    <tr>
+                        <th>
+                            <?= $row[1] ?>
+                        </th>
+                        <th>
+                            <?= $row[2] ?>
+                        </th>
+                        <th class="d-flex flex-column">
+                            <a href="/codeReaders/view/book/edit.php?id=<?= $row[0] ?>" class="btn btn-primary">Editar</a>
+                            <!-- Button trigger modal -->
+                            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
+                            <a href="view/book/show.php?id=<?= $row[0] ?>" class="btn btn-info">+ Info</a>
+                        </th>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
@@ -55,22 +47,22 @@ $rows = $obj->index();
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
-                                        <a href="delete.php?id=<?= $row[0] ?>" class="btn btn-danger">Eliminar</a>
+                                        <a href="view/book/delete.php?id=<?= $row[0] ?>" class="btn btn-danger">Eliminar</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </th>
+                        </th>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="3" class="text-center">No hay registros</td>
                 </tr>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <tr>
-                <td colspan="3" class="text-center">No hay registros</td>
-            </tr>
-        <?php endif; ?>
-    </tbody>
-</table>
+            <?php endif; ?>
+        </tbody>
+    </table>
 
-<?php
-require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php");
-?>
+    <?php
+    require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php");
+    ?>
