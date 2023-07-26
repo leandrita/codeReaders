@@ -10,7 +10,7 @@ $date = $obj->show($_GET['id']);
 
 <h2 class="text-center">Detalles del libro</h2>
 <div class="pb-3">
-    <a href="index.php" class="btn btn-primary">Regresar</a>
+    <a href="/codeReaders/index.php" class="btn btn-primary">Regresar</a>
     <a href="edit.php?id=<?= $date[0] ?>" class="btn btn-success">Editar</a>
     <!-- Button trigger modal -->
     <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>

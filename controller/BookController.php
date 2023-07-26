@@ -10,11 +10,11 @@ class controller
     public function guardar($titulo)
     {
         $id = $this->model->insertar($titulo);
-        return ($id != false) ? header("Location:show.php?id=" . $id) : header("Location:create.php");
+        return ($id != false) ? header("Location: show.php?id=" . $id) : header("Location: create.php");
     }
     public function show($id)
     {
-        return ($this->model->show($id) != false) ? $this->model->show($id) : header("Location:index.php");
+        return ($this->model->show($id) != false) ? $this->model->show($id) : header("Location: index.php");
     }
     public function index()
     {
@@ -22,11 +22,11 @@ class controller
     }
     public function update($id, $titulo)
     {
-        return ($this->model->update($id, $titulo) != false) ? header("Location:show.php?id=" . $id) : header("Location:index.php");
+        return ($this->model->update($id, $titulo) != false) ? header("Location: show.php?id=" . $id) : header("Location: index.php");
     }
     public function delete($id)
     {
-        return ($this->model->delete($id)) ? header("Location:index.php") : header("Location:show.php?id=" . $id);
+        return ($this->model->delete($id)) ? header("Location: /codeReaders/index.php") : header("Location: show.php?id=" . $id);
     }
 }
 
