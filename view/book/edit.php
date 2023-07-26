@@ -24,7 +24,7 @@ $user = $obj->show($_GET['id']);
     </div>
     <div>
         <input type="submit" class="btn btn-success" value="Actualizar"></input>
-        <a class="btn btn-danger" href="show.php?id=<?= $user[0] ?>">Cancelar</a>
+        <a class="btn btn-danger" href="/codeReaders/index.php?id=<?= $user[0] ?>">Cancelar</a>
     </div>
 </form>
 <?php
