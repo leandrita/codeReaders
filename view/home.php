@@ -1,9 +1,15 @@
+<?php
+require_once '../config/conexion.php';
+
+$codereaders = "SELECT * FROM codereaders";
+$resultado = mysqli_query($conexion, $codereaders);
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Biblioteca PHP</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="view/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <header>
@@ -36,20 +42,18 @@
                     <tr>
                         <th>Título:</th>
                         <th>Autor:</th>
-                        <th>Descripción:</th>
-                        <th>ISBN:</th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    $numLibros = 15;
-                    for ($i = 1; $i <= $numLibros; $i++) {
+
+                <?php
+                    while ($row = mysqli_fetch_assoc($resultado)) {
                         echo "<tr>";
-                        echo "<td>Libro $i</td>";
-                        echo "<td>Autor $i</td>";
-                        echo "<td>Descripción:</td>";
-                        echo "<td>ISBN: $i</td>";
-                        echo "<td>";
+                        //echo "<td>" . (isset($row['imagen']) ? $row['imagen'] : '') . "</td>";
+                        echo "<td>" . (isset($row['título']) ? $row['título'] : '') . "</td>";
+                        echo "<td>" . (isset($row['autor']) ? $row['autor'] : '') . "</td>";
+                                               echo "<td>";
                         echo "<button class='btn btn-primary'>Editar</button>";
                         echo "<button class='btn btn-danger'>Eliminar</button>";
                         echo "<button class='btn btn-info'>+Info</button>";
@@ -100,13 +104,15 @@
     </main>
 
     <footer>
-        <div class="container">
+        <div class="footer" style="color: white; padding: 10px; text align: center;">
             @2023 - Todos los derechos reservados - CodeReaders
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script>
         function abrirModal() {
             $("#myModal").modal("show");
@@ -118,3 +124,4 @@
     </script>
 </body>
 </html>
+
