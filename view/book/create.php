@@ -34,9 +34,6 @@ ini_set('display_errors', 1);
                     <li class="nav-item active">
                         <a class="nav-link" href="/codeReaders/index.php">INICIO</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="view/book/create.php" onclick="abrirModal()">CREAR</a>
-                    </li>
                 </ul>
             </div>
         </nav>
