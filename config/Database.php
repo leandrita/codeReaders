@@ -2,9 +2,9 @@
 class db
 {
     private $host = "localhost";
-    private $dbname = "BibliotecaPHP";
+    private $dbname = "bibliotecaphp";
     private $user = "root";
-    private $password = "root";
+    private $password = "";
     public function conection()
     {
         try {

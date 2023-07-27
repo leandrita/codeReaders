@@ -3,8 +3,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once("/Applications/MAMP/htdocs/codeReaders/view/head/head.php");
-require_once("/Applications/MAMP/htdocs/codeReaders/controller/BookController.php");
+require_once("C://xampp/htdocs/codeReaders/view/head/head.php");
+require_once("C://xampp/htdocs/codeReaders/controller/BookController.php");
 $obj = new controller();
 $rows = $obj->index();
 ?>
@@ -26,6 +26,7 @@ $rows = $obj->index();
                         <th>
                             <?= $row[2] ?>
                         </th>
+                        
                         <th class="d-flex flex-column">
                             <a href="/codeReaders/view/book/edit.php?id=<?= $row[0] ?>" class="btn btn-primary">Editar</a>
                             <!-- Button trigger modal -->
@@ -64,5 +65,5 @@ $rows = $obj->index();
     </table>
 
     <?php
-    require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php");
+    require_once("C://xampp/htdocs/codeReaders/view/head/footer.php");
     ?>

@@ -4,7 +4,7 @@ class controller
     private $model;
     public function __construct()
     {
-        require_once("/Applications/MAMP/htdocs/codeReaders/model/BookModel.php");
+        require_once("C://xampp/htdocs/codeReaders/model/BookModel.php");
         $this->model = new model();
     }
     public function guardar($titulo, $autor, $descripcion, $isbn, $imagen)

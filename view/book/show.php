@@ -2,10 +2,11 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once("/Applications/MAMP/htdocs/codeReaders/view/head/head.php");
-require_once("/Applications/MAMP/htdocs/codeReaders/controller/BookController.php");
+require_once("C://xampp/htdocs/codeReaders/view/head/head.php");
+require_once("C://xampp/htdocs/codeReaders/controller/BookController.php");
 $obj = new controller();
 $date = $obj->show($_GET['id']);
+
 ?>
 
 <h2 class="text-center">Detalles del libro</h2>
@@ -37,7 +38,7 @@ $date = $obj->show($_GET['id']);
 <table class="table container-fluid">
     <thead>
         <tr>
-            <th scope="col">Id</th>
+            <th scope="col">imagen</th>
             <th scope="col">Título</th>
             <th scope="col">Autor</th>
             <th scope="col">Descripción</th>
@@ -46,9 +47,7 @@ $date = $obj->show($_GET['id']);
     </thead>
     <tbody>
         <tr>
-            <td scope="col">
-                <?= $date[0] ?>
-            </td>
+        <td><img src="<?php echo substr($fila['image'],3)?>" alt="" srcset=""></td>
             <td scope=" col">
                 <?= $date[1] ?>
             </td>
@@ -66,5 +65,5 @@ $date = $obj->show($_GET['id']);
 </table>
 
 <?php
-require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php")
+require_once("C://xampp/htdocs/codeReaders/view/head/footer.php")
     ?>
