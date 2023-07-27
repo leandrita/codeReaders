@@ -2,14 +2,15 @@
 
   include('../config/Database.php'); 
 
+    $id = $_REQUEST['id'];
+
     $title = $_POST['title'];
     $author = $_POST['author'];
     $description = $_POST['description'];
     $isbn = $_POST['isbn'];
     $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
-    
 
-    $query = "INSERT INTO codereaders(título, autor, descripción, ISBN, imagen) VALUES ('$title','$author','$description','$isbn','$image')";
+    $query = "UPDATE codereaders SET título='$title', autor='$author', descripción='$description', ISBN='$isbn', imagen='$image' WHERE id='$id'";
 
     $result = $connection->query($query);
 
