@@ -2,7 +2,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once("C://xampp/htdocs/codeReaders/view/head/head.php");
 require_once("C://xampp/htdocs/codeReaders/controller/BookController.php");
 $obj = new controller();
 $user = $obj->show($_GET['id']);

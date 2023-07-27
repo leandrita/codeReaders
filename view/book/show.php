@@ -2,7 +2,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once("C://xampp/htdocs/codeReaders/view/head/head.php");
 require_once("C://xampp/htdocs/codeReaders/controller/BookController.php");
 $obj = new controller();
 $date = $obj->show($_GET['id']);
@@ -41,7 +40,7 @@ $date = $obj->show($_GET['id']);
                         <a class="nav-link" href="/codeReaders/index.php">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="view/book/create.php" onclick="abrirModal()">CREAR</a>
+                        <a class="nav-link" href="../../view/book/create.php" onclick="abrirModal()">CREAR</a>
                     </li>
                 </ul>
             </div>
@@ -107,5 +106,5 @@ $date = $obj->show($_GET['id']);
         </table>
 
         <?php
-        require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php")
+        require_once("C://xampp/htdocs/codeReaders/view/head/footer.php")
             ?>

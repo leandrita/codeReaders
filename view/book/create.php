@@ -2,8 +2,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once("C://xampp/htdocs/codeReaders/view/head/head.php");
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -71,6 +69,6 @@ require_once("C://xampp/htdocs/codeReaders/view/head/head.php");
     </form>
 
     <?php
-    require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php");
+    require_once("C://xampp/htdocs/codeReaders/view/head/footer.php");
 
     ?>

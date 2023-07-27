@@ -27,6 +27,9 @@ $rows = $obj->index();
                         <th>
                             <?= $row[2] ?>
                         </th>
+                        <th class="tapa">
+                            <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($row[4]); ?>">
+                        </th>
                         <th class="d-flex flex-column">
                             <a href="/codeReaders/view/book/edit.php?id=<?= $row[0] ?>" class="btn btn-primary">Editar</a>
                             <!-- Button trigger modal -->
