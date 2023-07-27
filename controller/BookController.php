@@ -9,7 +9,7 @@ class controller
     }
     public function guardar($titulo, $autor, $descripcion, $isbn, $imagen)
     {
-        $id = $this->model->insertar($titulo);
+        $id = $this->model->insertar($titulo, $autor, $descripcion, $isbn, $imagen);
         return ($id != false) ? header("Location: show.php?id=" . $id) : header("Location: create.php");
     }
     public function show($id)
@@ -22,7 +22,15 @@ class controller
     }
     public function update($id, $titulo, $autor, $descripcion, $isbn, $imagen)
     {
-        return ($this->model->update($id, $titulo, $autor, $descripcion, $isbn, $imagen) != false) ? header("Location: show.php?id=" . $id) : header("Location: index.php");
+        // Llamada a la función update del modelo para actualizar el libro
+        $result = $this->model->update($id, $titulo, $autor, $descripcion, $isbn, $imagen);
+
+        // Redirección después de la actualización
+        if ($result !== false) {
+            header("Location: show.php?id=" . $id);
+        } else {
+            header("Location: index.php");
+        }
     }
     public function delete($id)
     {

@@ -45,13 +45,8 @@ $user = $obj->show($_GET['id']);
             </div>
         </nav>
     </div>
-    <form action="update.php" method="post" autocomplete="off">
+    <form action="update.php?id=<?= $user['id'] ?>" method="post" autocomplete="off" enctype="multipart/form-data">
         <h2>Modificando registro</h2>
-        <!-- <div class="mb-3 row">
-            <label for="id" class="col-sm-2 col-form-label">Id</label>
-            <div class="col-sm-10">
-                <input type="text" name="id" readonly class="form-control-plaintext" id="id" value="<?= $user['id'] ?>">
-            </div> -->
         </div>
         <div class="mb-3 row">
             <label for="titulo" class="col-sm-2 col-form-label">Nuevo título</label>
@@ -72,10 +67,11 @@ $user = $obj->show($_GET['id']);
             </div>
         </div>
         <div class="mb-3 row">
-            <label for="isbn" class="col-sm-2 col-form-label">Nuevo ISBN</label>
-            <div class="col-sm-10">
-                <input type="text" name="isbn" class="form-control" value="<?= $user['ISBN'] ?>" id="isbn">
-            </div>
+    <label for="isbn" class="col-sm-2 col-form-label">Nuevo ISBN</label>
+    <div class="col-sm-10">
+        <input type="text" name="isbn" class="form-control" value="<?= $user['ISBN'] ?>" id="isbn">
+    </div>
+</div>
         </div>
         <div class="mb-3 row tapa">
             <label for="imagen" class="col-sm-2 col-form-label">Nueva imagen</label>
@@ -86,7 +82,8 @@ $user = $obj->show($_GET['id']);
         </div>
         </br></br>
         <div>
-            <input type="submit" class="btn btn-primary" value="Actualizar"></input>
+            <!-- <input type="submit" class="btn btn-primary" value="Actualizar"></input> -->
+            <button type="submit" class="btn btn-primary">Actualizar</button>
             <a class="btn btn-danger" href="/codeReaders/index.php?id=<?= $user['id'] ?>">Cancelar</a>
         </div>
 </br></br></br></br></br>

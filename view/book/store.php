@@ -17,9 +17,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $autor = $_POST['autor'];
         $descripcion = $_POST['descripcion'];
         $isbn = $_POST['isbn'];
-        $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
-        $query = "INSERT INTO codereaders(titulo, autor, descripcion, isbn, imagen) VALUES ('$titulo','$autor','$descripcion','$isbn','$imagen')";
+        // Verificar si se ha subido el archivo correctamente
+        if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+            $imagen = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+        } else {
+            // Si no se subió una imagen o hubo un error al cargarla, establecer $imagen como nulo
+            $imagen = null;
+        }
+
+        $query = "INSERT INTO codereaders(título, autor, descripción, ISBN, imagen) VALUES ('$titulo','$autor','$descripcion','$isbn','$imagen')";
 
         $result = $connection->query($query);
 

@@ -87,19 +87,19 @@ $date = $obj->show($_GET['id']);
             <tbody>
                 <tr>
                     <td scope=" col">
-                        <?= $date[1] ?>
+                        <?= $date['título'] ?>
                     </td>
                     <td scope=" col">
-                        <?= $date[2] ?>
+                        <?= $date['autor'] ?>
                     </td>
                     <td scope=" col">
-                        <?= $date[3] ?>
+                        <?= $date['descripción'] ?>
                     </td>
                     <td scope=" col">
-                        <?= $date[5] ?>
+                        <?= $date['ISBN'] ?>
                     </td>
                     <th scope=" col" class="tapa">
-                        <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($date[4]); ?>">
+                        <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($date['imagen']); ?>">
                     </th>
                 </tr>
             </tbody>
