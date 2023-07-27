@@ -24,7 +24,7 @@ $user = $obj->show($_GET['id']);
     <link rel="stylesheet" type="text/css" href="../../resources/css/style.css">
 </head>
 
-<body>
+<body class="vh-100">
     <div class="container">
         <nav class="navbar navbar-expand-md">
             <a class="navbar-brand" href="#">
@@ -45,50 +45,56 @@ $user = $obj->show($_GET['id']);
             </div>
         </nav>
     </div>
-    <form action="update.php" method="post" autocomplete="off">
-        <h2>Modificando registro</h2>
-        <div class="mb-3 row">
-            <label for="id" class="col-sm-2 col-form-label">Id</label>
-            <div class="col-sm-10">
-                <input type="text" name="id" readonly class="form-control-plaintext" id="id" value="<?= $user[0] ?>">
+    <div class="container vh-100">
+        <form action="update.php" method="post" autocomplete="off">
+            <h2>Modificando registro</h2>
+            <div class="mb-3 row">
+                <label for="id" class="col-sm-2 col-form-label">Id</label>
+                <div class="col-sm-10">
+                    <input type="text" name="id" readonly class="form-control-plaintext" id="id"
+                        value="<?= $user[0] ?>">
+                </div>
             </div>
-        </div>
-        <div class="mb-3 row">
-            <label for="titulo" class="col-sm-2 col-form-label">Nuevo título</label>
-            <div class="col-sm-10">
-                <input type="text" name="titulo" class="form-control" value="<?= $user[1] ?>" id="titulo">
+            <div class="mb-3 row">
+                <label for="titulo" class="col-sm-2 col-form-label">Nuevo título</label>
+                <div class="col-sm-10">
+                    <input type="text" name="titulo" class="form-control" value="<?= $user[1] ?>" id="titulo">
+                </div>
             </div>
-        </div>
-        <div class="mb-3 row">
-            <label for="autor" class="col-sm-2 col-form-label">Nuevo autor</label>
-            <div class="col-sm-10">
-                <input type="text" name="autor" class="form-control" value="<?= $user[2] ?>" id="autor">
+            <div class="mb-3 row">
+                <label for="autor" class="col-sm-2 col-form-label">Nuevo autor</label>
+                <div class="col-sm-10">
+                    <input type="text" name="autor" class="form-control" value="<?= $user[2] ?>" id="autor">
+                </div>
             </div>
-        </div>
-        <div class="mb-3 row">
-            <label for="descripcion" class="col-sm-2 col-form-label">Nueva descripción</label>
-            <div class="col-sm-10">
-                <input type="text" name="descripcion" class="form-control" value="<?= $user[3] ?>" id="descripcion">
+            <div class="mb-3 row">
+                <label for="descripcion" class="col-sm-2 col-form-label">Nueva descripción</label>
+                <div class="col-sm-10">
+                    <input type="text" name="descripcion" class="form-control" value="<?= $user[3] ?>" id="descripcion">
+                </div>
             </div>
-        </div>
-        <div class="mb-3 row">
-            <label for="isbn" class="col-sm-2 col-form-label">Nuevo ISBN</label>
-            <div class="col-sm-10">
-                <input type="text" name="isbn" class="form-control" value="<?= $user[5] ?>" id="isbn">
+            <div class="mb-3 row">
+                <label for="isbn" class="col-sm-2 col-form-label">Nuevo ISBN</label>
+                <div class="col-sm-10">
+                    <input type="text" name="isbn" class="form-control" value="<?= $user[5] ?>" id="isbn">
+                </div>
             </div>
-        </div>
-        <div class="mb-3 row tapa">
-            <label for="imagen" class="col-sm-2 col-form-label">Nueva imagen</label>
-            <div class="col-sm-10">
-                <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($user[4]); ?>">
-                <input type="file" name="imagen" class="form-control" id="imagen">
+            <div class="mb-3 row tapa">
+                <label for="imagen" class="col-sm-2 col-form-label">Nueva imagen</label>
+                <div class="col-sm-10">
+                    <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($user[4]); ?>">
+                    <label class="btn btn-primary btn-file">
+                        Choose<input type="file" name="imagen" id="imagen" style="display: none;">
+                    </label>
+                    <!-- <input type="file" name="imagen" class="btn" id="imagen"> -->
+                </div>
             </div>
-        </div>
-        <div>
-            <input type="submit" class="btn btn-primary" value="Actualizar"></input>
-            <a class="btn btn-danger" href="/codeReaders/index.php?id=<?= $user[0] ?>">Cancelar</a>
-        </div>
-    </form>
+            <div class="text-center mt-3">
+                <input type="submit" class="btn btn-primary" value="Actualizar"></input>
+                <a class="btn btn-danger" href="/codeReaders/index.php?id=<?= $user[0] ?>">Cancelar</a>
+            </div>
+        </form>
+    </div>
     <?php
     require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php")
         ?>
