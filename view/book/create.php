@@ -18,7 +18,7 @@ require_once("C://xampp/htdocs/codeReaders/view/head/head.php");
     </div>
     <div class="form-group">
         <label for="description">Descripción</label>
-        <input type="text" class="form-control" id="description" name="descripcion" placeholder="">
+        <input type="text" class="form-control" id="description" name="descripcin" placeholder="">
     </div>
     <div class="form-group">
         <label for="isbn">ISBN</label>
