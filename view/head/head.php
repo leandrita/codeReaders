@@ -32,7 +32,7 @@
         <div class="container mt-5">
             <form method="post">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="codereaders" name="codereaders" placeholder=""
+                    <input type="text" class="form-control" id="codereaders" name="codereaders" placeholder="Buscar por Título o Autor"
                         aria-label="Buscar" aria-describedby="button-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="submit" name="buscar" id="button-addon2">Buscar</button>
@@ -45,8 +45,9 @@
 
             if (isset($_POST["buscar"])) {
                 $str = $_POST["codereaders"];
-                $sth = $con->prepare('SELECT * FROM codereaders WHERE título = :titulo');
-                $sth->bindParam(':titulo', $str, PDO::PARAM_STR);
+                $sth = $con->prepare('SELECT * FROM codereaders WHERE título LIKE :search OR autor LIKE :search');
+                $searchParam = '%' . $str . '%'; // Add wildcard to perform a partial search
+                $sth->bindParam(':search', $searchParam, PDO::PARAM_STR);
                 $sth->setFetchMode(PDO::FETCH_OBJ);
                 $sth->execute();
                 $rows = $sth->fetchAll(PDO::FETCH_OBJ);
@@ -110,7 +111,7 @@
                     </div>
                     <?php
                 } else {
-                    echo '<div class="row"><div class="col"><p>Título no existe</p></div></div>';
+                    echo '<div class="row"><div class="col"><p>No se encontraron resultados</p></div></div>';
                 }
             }
             ?>
