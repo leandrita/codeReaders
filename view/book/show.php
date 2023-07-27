@@ -38,7 +38,7 @@ $date = $obj->show($_GET['id']);
 <table class="table container-fluid">
     <thead>
         <tr>
-            <th scope="col">imagen</th>
+            <th scope="col">id</th>
             <th scope="col">Título</th>
             <th scope="col">Autor</th>
             <th scope="col">Descripción</th>
@@ -47,7 +47,7 @@ $date = $obj->show($_GET['id']);
     </thead>
     <tbody>
         <tr>
-        <td><img src="<?php echo substr($fila['image'],3)?>" alt="" srcset=""></td>
+        <td><?= $date[0] ?></td>
             <td scope=" col">
                 <?= $date[1] ?>
             </td>
