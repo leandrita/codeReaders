@@ -14,6 +14,7 @@ $rows = $obj->index();
             <tr>
                 <th scope="col">Título</th>
                 <th scope="col">Autor</th>
+                <th scope="col">Imagen</th>
             </tr>
         </thead>
         <tbody>
@@ -26,7 +27,6 @@ $rows = $obj->index();
                         <th>
                             <?= $row[2] ?>
                         </th>
-                        
                         <th class="d-flex flex-column">
                             <a href="/codeReaders/view/book/edit.php?id=<?= $row[0] ?>" class="btn btn-primary">Editar</a>
                             <!-- Button trigger modal -->
@@ -47,7 +47,7 @@ $rows = $obj->index();
                                         Una vez eliminado no se podrá recuperar el registro.
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
                                         <a href="view/book/delete.php?id=<?= $row[0] ?>" class="btn btn-danger">Eliminar</a>
                                     </div>
                                 </div>
