@@ -46,7 +46,7 @@ $user = $obj->show($_GET['id']);
         </nav>
     </div>
     <div class="container vh-100">
-        <form action="update.php" method="post" autocomplete="off">
+        <form action="update.php" method="post" autocomplete="off" enctype="multipart/form-data">
             <h2>Modificando registro</h2>
             <div class="mb-3 row">
                 <label for="id" class="col-sm-2 col-form-label">Id</label>
