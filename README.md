@@ -43,7 +43,7 @@ Es importante mencionar que tanto la cabecera como el pie de documento de cada u
 <img src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="40" />
 <img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="35" />
 <img src="https://www.php.net/images/logos/php-logo.svg" alt="Php" height="30" </div>
-<img src="https://www.php.net/images/logos/php-logo.svg" alt="MySQL" height="30" </div>
+<img src="https://www.flaticon.es/icono-gratis/mysql_919836?term=mysql&page=1&position=4&origin=tag&related_id=919836" alt="MySQL" height="30" </div>
 
 ## Herramientas
 
