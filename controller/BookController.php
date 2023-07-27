@@ -20,9 +20,9 @@ class controller
     {
         return ($this->model->index()) ? $this->model->index() : false;
     }
-    public function update($id, $titulo)
+    public function update($id, $titulo, $autor, $descripcion, $isbn, $imagen)
     {
-        return ($this->model->update($id, $titulo) != false) ? header("Location: show.php?id=" . $id) : header("Location: index.php");
+        return ($this->model->update($id, $titulo, $autor, $descripcion, $isbn, $imagen) != false) ? header("Location: show.php?id=" . $id) : header("Location: index.php");
     }
     public function delete($id)
     {
