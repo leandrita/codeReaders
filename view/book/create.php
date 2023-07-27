@@ -69,6 +69,6 @@ ini_set('display_errors', 1);
     </form>
 
     <?php
-    require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php");
+    require_once("C://xampp/htdocs/codeReaders/view/head/footer.php");
 
     ?>

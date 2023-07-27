@@ -3,8 +3,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once("/Applications/MAMP/htdocs/codeReaders/controller/BookController.php");
-require_once("/Applications/MAMP/htdocs/codeReaders/config/Database.php");
+require_once("C://xampp/htdocs/codeReaders/controller/BookController.php");
+require_once("C://xampp/htdocs/codeReaders/config/Database.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 

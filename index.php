@@ -3,8 +3,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once("/Applications/MAMP/htdocs/codeReaders/view/head/head.php");
-require_once("/Applications/MAMP/htdocs/codeReaders/controller/BookController.php");
+require_once("C://xampp/htdocs/codeReaders/view/head/head.php");
+require_once("C://xampp/htdocs/codeReaders/controller/BookController.php");
 $obj = new controller();
 $rows = $obj->index();
 ?>
@@ -28,13 +28,13 @@ $rows = $obj->index();
                             <?= $row[2] ?>
                         </th>
                         <th class="tapa">
-                            <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($row[4]); ?>">
+                            <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($row['imagen']); ?>">
                         </th>
                         <th class="d-flex flex-column">
-                            <a href="/codeReaders/view/book/edit.php?id=<?= $row[0] ?>" class="btn btn-primary">Editar</a>
+                            <a href="/codeReaders/view/book/edit.php?id=<?= $row['id'] ?>" class="btn btn-primary">Editar</a>
                             <!-- Button trigger modal -->
                             <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
-                            <a href="view/book/show.php?id=<?= $row[0] ?>" class="btn btn-info">+ Info</a>
+                            <a href="view/book/show.php?id=<?= $row['id'] ?>" class="btn btn-info">+ Info</a>
                         </th>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -51,7 +51,7 @@ $rows = $obj->index();
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
-                                        <a href="view/book/delete.php?id=<?= $row[0] ?>" class="btn btn-danger">Eliminar</a>
+                                        <a href="view/book/delete.php?id=<?= $row['id'] ?>" class="btn btn-danger">Eliminar</a>
                                     </div>
                                 </div>
                             </div>
@@ -68,5 +68,5 @@ $rows = $obj->index();
     </table>
 
     <?php
-    require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php");
+    require_once("C://xampp/htdocs/codeReaders/view/head/footer.php");
     ?>

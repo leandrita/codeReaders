@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once("/Applications/MAMP/htdocs/codeReaders/controller/BookController.php");
+require_once("C://xampp/htdocs/codeReaders/controller/BookController.php");
 $obj = new controller();
 $user = $obj->show($_GET['id']);
 ?>
@@ -47,48 +47,50 @@ $user = $obj->show($_GET['id']);
     </div>
     <form action="update.php" method="post" autocomplete="off">
         <h2>Modificando registro</h2>
-        <div class="mb-3 row">
+        <!-- <div class="mb-3 row">
             <label for="id" class="col-sm-2 col-form-label">Id</label>
             <div class="col-sm-10">
-                <input type="text" name="id" readonly class="form-control-plaintext" id="id" value="<?= $user[0] ?>">
-            </div>
+                <input type="text" name="id" readonly class="form-control-plaintext" id="id" value="<?= $user['id'] ?>">
+            </div> -->
         </div>
         <div class="mb-3 row">
             <label for="titulo" class="col-sm-2 col-form-label">Nuevo título</label>
             <div class="col-sm-10">
-                <input type="text" name="titulo" class="form-control" value="<?= $user[1] ?>" id="titulo">
+                <input type="text" name="titulo" class="form-control" value="<?= $user['título'] ?>" id="titulo">
             </div>
         </div>
         <div class="mb-3 row">
             <label for="autor" class="col-sm-2 col-form-label">Nuevo autor</label>
             <div class="col-sm-10">
-                <input type="text" name="autor" class="form-control" value="<?= $user[2] ?>" id="autor">
+                <input type="text" name="autor" class="form-control" value="<?= $user['autor'] ?>" id="autor">
             </div>
         </div>
         <div class="mb-3 row">
             <label for="descripcion" class="col-sm-2 col-form-label">Nueva descripción</label>
             <div class="col-sm-10">
-                <input type="text" name="descripcion" class="form-control" value="<?= $user[3] ?>" id="descripcion">
+                <input type="text" name="descripcion" class="form-control" value="<?= $user['descripción'] ?>" id="descripcion">
             </div>
         </div>
         <div class="mb-3 row">
             <label for="isbn" class="col-sm-2 col-form-label">Nuevo ISBN</label>
             <div class="col-sm-10">
-                <input type="text" name="isbn" class="form-control" value="<?= $user[5] ?>" id="isbn">
+                <input type="text" name="isbn" class="form-control" value="<?= $user['ISBN'] ?>" id="isbn">
             </div>
         </div>
         <div class="mb-3 row tapa">
             <label for="imagen" class="col-sm-2 col-form-label">Nueva imagen</label>
             <div class="col-sm-10">
-                <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($user[4]); ?>">
+                <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($user['imagen']); ?>">
                 <input type="file" name="imagen" class="form-control" id="imagen">
             </div>
         </div>
+        </br></br>
         <div>
             <input type="submit" class="btn btn-primary" value="Actualizar"></input>
-            <a class="btn btn-danger" href="/codeReaders/index.php?id=<?= $user[0] ?>">Cancelar</a>
+            <a class="btn btn-danger" href="/codeReaders/index.php?id=<?= $user['id'] ?>">Cancelar</a>
         </div>
+</br></br></br></br></br>
     </form>
     <?php
-    require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php")
+    require_once("C://xampp/htdocs/codeReaders/view/head/footer.php")
         ?>
