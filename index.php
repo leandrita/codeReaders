@@ -26,6 +26,7 @@ $rows = $obj->index();
                         <th>
                             <?= $row[2] ?>
                         </th>
+                        
                         <th class="d-flex flex-column">
                             <a href="/codeReaders/view/book/edit.php?id=<?= $row[0] ?>" class="btn btn-primary">Editar</a>
                             <!-- Button trigger modal -->
@@ -64,5 +65,5 @@ $rows = $obj->index();
     </table>
 
     <?php
-    require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php");
+    require_once("C://xampp/htdocs/codeReaders/view/head/footer.php");
     ?>
