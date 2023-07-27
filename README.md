@@ -31,10 +31,6 @@ Es importante mencionar que tanto la cabecera como el pie de documento de cada u
 ![HOME](resources/img/Desktop1.png)
 
 ![SHOW](resources/img/Desktop2.png)
-#### Movil
-
-![Home]()
-![Show]()
 
 ## Tecnologías
 
