@@ -46,7 +46,7 @@ $user = $obj->show($_GET['id']);
         </nav>
     </div>
     <div class="container vh-100">
-        <form action="update.php" method="post" autocomplete="off" enctype="multipart/form-data">
+        <form action="update.php" method="post" autocomplete="off">
             <h2>Modificando registro</h2>
             <div class="mb-3 row">
                 <label for="id" class="col-sm-2 col-form-label">Id</label>
@@ -79,16 +79,7 @@ $user = $obj->show($_GET['id']);
                     <input type="text" name="isbn" class="form-control" value="<?= $user[5] ?>" id="isbn">
                 </div>
             </div>
-            <div class="mb-3 row tapa">
-                <label for="imagen" class="col-sm-2 col-form-label">Nueva imagen</label>
-                <div class="col-sm-10">
-                    <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($user[4]); ?>">
-                    <label class="btn btn-primary btn-file">
-                        Choose<input type="file" name="imagen" id="imagen" style="display: none;">
-                    </label>
-                    <!-- <input type="file" name="imagen" class="btn" id="imagen"> -->
-                </div>
-            </div>
+
             <div class="text-center mt-3">
                 <input type="submit" class="btn btn-primary" value="Actualizar"></input>
                 <a class="btn btn-danger" href="/codeReaders/index.php?id=<?= $user[0] ?>">Cancelar</a>

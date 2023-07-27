@@ -26,25 +26,16 @@ class model
         $statement = $this->PDO->prepare("SELECT * FROM codereaders");
         return ($statement->execute()) ? $statement->fetchAll() : false;
     }
-    public function update($id, $titulo, $autor, $descripcion, $isbn, $imagen)
+    public function update($id, $titulo, $autor, $descripcion, $isbn)
     {
-        try {
-            $statement = $this->PDO->prepare("UPDATE codereaders SET titulo = :titulo, autor = :autor, descripcion = :descripcion, isbn = :isbn, imagen = :imagen WHERE id = :id");
-            $statement->bindParam(":titulo", $titulo);
-            $statement->bindParam(":autor", $autor);
-            $statement->bindParam(":descripcion", $descripcion);
-            $statement->bindParam(":isbn", $isbn);
-            $statement->bindParam(":imagen", $imagen);
-            $statement->bindParam(":id", $id);
+        $statement = $this->PDO->prepare("UPDATE codereaders SET titulo = :titulo, autor = :autor, descripcion = :descripcion, isbn = :isbn WHERE id = :id");
+        $statement->bindParam(":titulo", $titulo);
+        $statement->bindParam(":autor", $autor);
+        $statement->bindParam(":descripcion", $descripcion);
+        $statement->bindParam(":isbn", $isbn);
+        $statement->bindParam(":id", $id);
 
-            return ($statement->execute()) ? $id : false;
-        } catch (PDOException $e) {
-            // Capturar excepción y mostrar mensaje de error o escribir en los registros de errores.
-            echo "Error en la consulta: " . $e->getMessage();
-            // Opción: Escribir en los registros de errores
-            error_log("Error en la consulta: " . $e->getMessage(), 0);
-            return false;
-        }
+        return ($statement->execute()) ? $id : false;
     }
     public function delete($id)
     {
