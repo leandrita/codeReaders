@@ -7,6 +7,7 @@
     $description = $_POST['description'];
     $isbn = $_POST['isbn'];
     $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+    
 
     $query = "INSERT INTO codereaders(título, autor, descripción, ISBN, imagen) VALUES ('$title','$author','$description','$isbn','$image')";
 

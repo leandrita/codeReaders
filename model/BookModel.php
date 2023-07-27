@@ -4,7 +4,7 @@ class model
     private $PDO;
     public function __construct()
     {
-        require_once("/Applications/MAMP/htdocs/codeReaders/config/Database.php");
+        require_once("C://xampp/htdocs/codeReaders/config/Database.php");
         $con = new db();
         $this->PDO = $con->conection();
     }
