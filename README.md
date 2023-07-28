@@ -15,9 +15,7 @@ La biblioteca de nuestro barrio se quiere modernizar y necesita tener todos sus 
 ## Descripción
 Primera página
 
-Es la página de inicio del Sitio Web, cuenta con un diseño minimalista en el que se ve el logo de una biblioteca. Lo principal de este sitio es que cuenta con dos enlaces (Inicio y Crear) donde los usuarios pueden utilizar para navegar.ç
-
-Además en esta página se encuentra la vista de los 15 libros extraídos de MySQL y en cada libro se renderiza un botón para editar, uno para eliminar y otro +Info que redirige a una segunda página. El boton de eliminar elimina un registro y el de editar permite cambiar atributos de un libro. Asimismo el enlace de crear genera un formulario que permite crear un nuevo registro de libro.
+Es la página de inicio del Sitio Web, cuenta con un diseño minimalista. Lo principal del header de este sitio es que cuenta con dos enlaces (Inicio y Crear) donde los usuarios pueden utilizar para navegar.Ad emás en esta página se encuentra la vista de los 15 libros extraídos de MySQL y en cada libro se renderiza un botón para editar, uno para eliminar y otro +Info que redirige a una segunda página donde se extiende la descripción del proyecto. El botón de eliminar elimina un registro y el de editar permite cambiar atributos de un libro. Asimism,o el enlace de crear genera un formulario que permite crear un nuevo registro de libro.
 
 Segunda Página
 
@@ -28,9 +26,13 @@ Es importante mencionar que tanto la cabecera como el pie de documento de cada u
 ## Mockups
 #### Desktop
 
+![SHOW](https://github.com/BibliotecaPHP/codeReaders/blob/main/resources/img/grup_desktop1.png)
+
+#### Mobile
+
 ![HOME](https://github.com/BibliotecaPHP/codeReaders/blob/main/resources/img/group_movil1.png)
 
-![SHOW](https://github.com/BibliotecaPHP/codeReaders/blob/main/resources/img/grup_desktop1.png)
+
 
 
 ## Tecnologías
