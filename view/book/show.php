@@ -67,7 +67,7 @@ $date = $obj->show($_GET['id']);
                             Una vez eliminado no se podrá recuperar el registro.
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
                             <a href="delete.php?id=<?= $date[0] ?>" class="btn btn-danger">Eliminar</a>
                         </div>
                     </div>

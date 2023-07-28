@@ -26,14 +26,14 @@ class model
         $statement = $this->PDO->prepare("SELECT * FROM codereaders");
         return ($statement->execute()) ? $statement->fetchAll() : false;
     }
-    public function update($id, $titulo, $autor, $descripcion, $isbn, $imagen)
+    public function update($id, $titulo, $autor, $descripcion, $isbn)
     {
-        $statement = $this->PDO->prepare("UPDATE codereaders SET titulo = :titulo WHERE id = :id");
+        $statement = $this->PDO->prepare("UPDATE codereaders SET titulo = :titulo, autor = :autor, descripcion = :descripcion, isbn = :isbn WHERE id = :id");
         $statement->bindParam(":titulo", $titulo);
         $statement->bindParam(":autor", $autor);
         $statement->bindParam(":descripcion", $descripcion);
         $statement->bindParam(":isbn", $isbn);
-        $statement->bindParam(":imagen", $imagen);
+        $statement->bindParam(":id", $id);
 
         return ($statement->execute()) ? $id : false;
     }
