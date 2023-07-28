@@ -46,15 +46,15 @@ ini_set('display_errors', 1);
                     aria-describedby="emailHelp">
             </div>
             <div class="form-group">
-                <label for="author">Autor</label>
+                <label for="author" required id = "Autor">Autor</label>
                 <input type="text" class="form-control" id="author" name="autor" placeholder="">
             </div>
             <div class="form-group">
-                <label for="description">Descripción</label>
+                <label for="description" required id ="Description">Descripción</label>
                 <input type="text" class="form-control" id="description" name="descripcion" placeholder="">
             </div>
             <div class="form-group">
-                <label for="isbn">ISBN</label>
+                <label for="isbn" required id ="isbn">ISBN</label>
                 <input type="text" class="form-control" id="isbn" name="isbn" aria-describedby="isbnHelp"
                     placeholder="">
                 <small id="isbnHelp" class="form-text text-muted">Introduce únicamente números.</small>
