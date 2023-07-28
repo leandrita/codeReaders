@@ -34,7 +34,7 @@ $date = $obj->show($_GET['id']);
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/codeReaders/index.php">INICIO</a>
@@ -46,7 +46,7 @@ $date = $obj->show($_GET['id']);
             </div>
         </nav>
     </div>
-    <div class=" container-fluid">
+    <div class="container-fluid style="width: 60%;">
         <h2 class="text-center">Detalles del libro</h2>
         <div class="pb-3">
             <a href="/codeReaders/index.php" class="btn btn-primary">Regresar</a>
@@ -54,7 +54,6 @@ $date = $obj->show($_GET['id']);
             <!-- Button trigger modal -->
             <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
 
-            <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
