@@ -1,10 +1,10 @@
 
 _____________________
-# <p align="center"> 📚 coderReaders 📚
+# <p align="center"> 📚 Biblioteca 📚
 
 
   <p align="center">
-   <img src="">
+   <img src="resources/img/Logo.png "width="160">
    </p>
 </p>
 
@@ -13,17 +13,27 @@ _____________________
 La biblioteca de nuestro barrio se quiere modernizar y necesita tener todos sus libros organizados en un programa web, tener un inventario actualizado le facilitará la gestión, para poder prestar mejor sus servicios, la administradora de la biblioteca necesita añadir libros, actualizarlos y poder borrarlos. También quiere que se visualicen en la primera página.
 
 ## Descripción
+Primera página
 
+Es la página de inicio del Sitio Web, cuenta con un diseño minimalista. Lo principal del header de este sitio es que cuenta con dos enlaces (Inicio y Crear) donde los usuarios pueden utilizar para navegar.Ad emás en esta página se encuentra la vista de los 15 libros extraídos de MySQL y en cada libro se renderiza un botón para editar, uno para eliminar y otro +Info que redirige a una segunda página donde se extiende la descripción del proyecto. El botón de eliminar elimina un registro y el de editar permite cambiar atributos de un libro. Asimism,o el enlace de crear genera un formulario que permite crear un nuevo registro de libro.
 
-## Diseño
+Segunda Página
+
+Esta sección muestra los diferentes atributos: título, autor, descripción, ISBN, foto. Asimismo hay tres botones: regresar, editar y eliminar.
+
+Nota:
+Es importante mencionar que tanto la cabecera como el pie de documento de cada una de las páginas incorporan el mismo contenido.
+## Mockups
 #### Desktop
 
-![HOME]()
-![DETAIL]()
-#### Movil
+![SHOW](https://github.com/BibliotecaPHP/codeReaders/blob/main/resources/img/grup_desktop1.png)
 
-![Home]()
-![PRODUCTDETAIL]()
+#### Mobile
+
+![HOME](https://github.com/BibliotecaPHP/codeReaders/blob/main/resources/img/group_movil1.png)
+
+
+
 
 ## Tecnologías
 
@@ -31,7 +41,8 @@ La biblioteca de nuestro barrio se quiere modernizar y necesita tener todos sus 
 <img src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="40" />
 <img src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="40" />
 <img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="35" />
-<img src="https://www.php.net/images/logos/php-logo.svg" alt="Php" height="35" </div>
+<img src="https://www.php.net/images/logos/php-logo.svg" alt="Php" height="25" </div>
+<img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/mysql_logo_icon_169941.png" alt="Php" height="30" </div>
 
 ## Herramientas
 
@@ -44,11 +55,12 @@ La biblioteca de nuestro barrio se quiere modernizar y necesita tener todos sus 
 
 ## Equipo
 
-        Neema - Product Owner y Developer (bneemanelly@gmail.com)
-        Leandra - Scrum Master y Developer (lea.bujh@gmail.com)
+        Neema Nelly- Product Owner y Developer (bneemanelly@gmail.com)
+        Leandra Bujhamer- Scrum Master y Developer (lea.bujh@gmail.com)
         Ana Lucía Silva Córdoba- Developer (coderalsc@gmail.com)
         Rosa Rubio - Developer (rosamrubio@gmail.com)
         Rosmary Medina- Developer (rousmedina21@gmail.com)
+
 
 ____________________________
 
