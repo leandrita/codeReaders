@@ -32,6 +32,10 @@ Es importante mencionar que tanto la cabecera como el pie de documento de cada u
 
 ![SHOW](resources/img/Desktop2.png)
 
+![Group](resources/img/group_desktop.png)
+
+![Group](resources/img/group_movil.png)
+
 ## Tecnologías
 
 <div align="">
