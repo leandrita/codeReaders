@@ -30,7 +30,7 @@ Es importante mencionar que tanto la cabecera como el pie de documento de cada u
 
 ![HOME](https://github.com/BibliotecaPHP/codeReaders/blob/main/resources/img/group_movil1.png)
 
-![SHOW](https://github.com/BibliotecaPHP/codeReaders/blob/main/resources/img/group_desktop1.png)
+![SHOW](https://github.com/BibliotecaPHP/codeReaders/blob/main/resources/img/grup_desktop1.png)
 
 
 ## Tecnologías
