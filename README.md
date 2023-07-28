@@ -34,7 +34,7 @@ Es importante mencionar que tanto la cabecera como el pie de documento de cada u
 
 ![Group](resources/img/grup_movil1.png)
 
-![Group](resources/img/group_movil.png)
+![Group](resources/img/group_desktop.png)
 
 ## Tecnologías
 
