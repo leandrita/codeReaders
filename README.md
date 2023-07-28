@@ -43,6 +43,8 @@ Es importante mencionar que tanto la cabecera como el pie de documento de cada u
 <img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="35" />
 <img src="https://www.php.net/images/logos/php-logo.svg" alt="Php" height="25" </div>
 <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/mysql_logo_icon_169941.png" alt="Php" height="30" </div>
+<img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="boostrap" height="30"</div>
+<img src="https://www.apachefriends.org/images/xampp-logo-ac950edf.svg" alt=xampp" height="30"</div>
 
 ## Herramientas
 
