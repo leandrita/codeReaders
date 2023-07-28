@@ -28,13 +28,10 @@ Es importante mencionar que tanto la cabecera como el pie de documento de cada u
 ## Mockups
 #### Desktop
 
-![HOME](resources/img/Desktop1.png)
+![HOME](resources/img/group_desktop1.png)
 
-![SHOW](resources/img/Desktop2.png)
+![SHOW](resources/img/group_movil1)
 
-![Group](resources/img/grup_movil1.png)
-
-![Group](resources/img/group_desktop.png)
 
 ## Tecnologías
 
