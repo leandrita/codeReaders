@@ -28,9 +28,9 @@ Es importante mencionar que tanto la cabecera como el pie de documento de cada u
 ## Mockups
 #### Desktop
 
-![HOME](resources/img/group_desktop1.png)
+![HOME](https://github.com/BibliotecaPHP/codeReaders/blob/main/resources/img/group_movil1.png)
 
-![SHOW](resources/img/group_movil1)
+![SHOW](https://github.com/BibliotecaPHP/codeReaders/blob/main/resources/img/group_desktop1.png)
 
 
 ## Tecnologías
