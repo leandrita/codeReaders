@@ -47,15 +47,15 @@ ini_set('display_errors', 1);
             </div>
             <div class="form-group">
                 <label for="author">Autor</label>
-                <input type="text" class="form-control" id="author" name="autor" placeholder="">
+                <input type="text" class="form-control" id="author" name="autor" required placeholder="">
             </div>
             <div class="form-group">
                 <label for="description">Descripción</label>
-                <input type="text" class="form-control" id="description" name="descripcion" placeholder="">
+                <input type="text" class="form-control" id="description" name="descripcion" required placeholder="">
             </div>
             <div class="form-group">
                 <label for="isbn">ISBN</label>
-                <input type="text" class="form-control" id="isbn" name="isbn" aria-describedby="isbnHelp"
+                <input type="text" class="form-control" id="isbn" name="isbn" required aria-describedby="isbnHelp"
                     placeholder="">
                 <small id="isbnHelp" class="form-text text-muted">Introduce únicamente números.</small>
             </div>
