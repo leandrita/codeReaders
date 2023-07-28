@@ -56,19 +56,19 @@ $user = $obj->show($_GET['id']);
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="titulo" class="col-sm-2 col-form-label" required id ="titulo">Nuevo título</label>
+                <label for="titulo" class="col-sm-2 col-form-label" required>Nuevo título</label>
                 <div class="col-sm-10">
                     <input type="text" name="titulo" class="form-control" value="<?= $user[1] ?>" id="titulo">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="autor" class="col-sm-2 col-form-label" required id ="autor">Nuevo autor</label>
+                <label for="autor" class="col-sm-2 col-form-label" required>Nuevo autor</label>
                 <div class="col-sm-10">
                     <input type="text" name="autor" class="form-control" value="<?= $user[2] ?>" id="autor">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="descripcion" class="col-sm-2 col-form-label" required id ="descripcion">Nueva descripción</label>
+                <label for="descripcion" class="col-sm-2 col-form-label" required>Nueva descripción</label>
                 <div class="col-sm-10">
                     <input type="text" name="descripcion" class="form-control" value="<?= $user[3] ?>" id="descripcion">
                 </div>
