@@ -37,7 +37,6 @@
         <small id="isbnHelp" class="form-text text-muted">Introduce únicamente números.</small>
 </div>
     <div class="form-group">
-        <!-- <label for="image">Sube una imagen:</label> -->
         <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($row['imagen']); ?>">
         <input type="file" class="form-control-file" id="image" name="image">
     </div>

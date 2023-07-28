@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query = "INSERT INTO codereaders(titulo, autor, descripcion, isbn, imagen) VALUES ('$titulo','$autor','$descripcion','$isbn','$imagen')";
         $result = $connection->query($query);
         if ($result == TRUE) {
-            echo "Se ha creado el registro.";
+            header("Location: /codeReaders/index.php");
         } else {
             echo "No se insertó";
         }

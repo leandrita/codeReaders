@@ -31,18 +31,16 @@ $rows = $obj->index();
                             <img class="card-img-top" src="data:image;base64,<?php echo base64_encode($row[4]); ?>">
                         </th>
                         <th class="d-flex flex-column">
-                            <a href="/codeReaders/view/book/edit.php?id=<?= $row[0] ?>" class="btn btn-primary">Editar</a>
-                            <!-- Button trigger modal -->
-                            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
-                            <a href="view/book/show.php?id=<?= $row[0] ?>" class="btn btn-info">+ Info</a>
+                            <a href="/codeReaders/view/book/edit.php?id=<?= $row[0] ?>" class="btn btn-primary m-1">Editar</a>
+                            <a class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
+                            <a href="view/book/show.php?id=<?= $row[0] ?>" class="btn btn-info m-1">+ Info</a>
                         </th>
-                        <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Desea eliminar el registro?</h1>
+                                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">¿Desea eliminar el registro?</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>

@@ -90,13 +90,11 @@
                                             <td class="d-flex flex-column">
                                                 <a href="/codeReaders/view/book/edit.php?id=<?= $book->id ?>"
                                                     class="btn btn-primary">Editar</a>
-                                                <!-- Button trigger modal -->
                                                 <a class="btn btn-danger" data-bs-toggle="modal"
                                                     data-bs-target="#exampleModal_<?= $book->id ?>">Eliminar</a>
                                                 <a href="view/book/show.php?id=<?= $book->id ?>" class="btn btn-info">+ Info</a>
                                             </td>
                                         </tr>
-                                        <!-- Modal -->
                                         <div class="modal fade" id="exampleModal_<?= $book->id ?>" tabindex="-1"
                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">

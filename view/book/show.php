@@ -51,10 +51,8 @@ $date = $obj->show($_GET['id']);
         <div class="pb-3">
             <a href="/codeReaders/index.php" class="btn btn-primary">Regresar</a>
             <a href="edit.php?id=<?= $date[0] ?>" class="btn btn-primary">Editar</a>
-            <!-- Button trigger modal -->
             <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
 
-            <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
