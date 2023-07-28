@@ -49,7 +49,7 @@
             </form>
 
             <?php
-            $con = new PDO("mysql:host=localhost;dbname=BibliotecaPHP", "root", "root");
+            $con = new PDO("mysql:host=localhost;dbname=bibliotecaphp", "root", "");
 
             if (isset($_POST["buscar"])) {
                 $str = $_POST["codereaders"];

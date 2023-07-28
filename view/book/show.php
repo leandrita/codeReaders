@@ -46,7 +46,7 @@ $date = $obj->show($_GET['id']);
             </div>
         </nav>
     </div>
-    <div class=" container-fluid">
+    <div class=" container-fluid" style="width: 60%;">
         <h2 class="text-center">Detalles del libro</h2>
         <div class="pb-3">
             <a href="/codeReaders/index.php" class="btn btn-primary">Regresar</a>
