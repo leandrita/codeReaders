@@ -7,7 +7,7 @@ class controller
         require_once("/Applications/MAMP/htdocs/codeReaders/model/BookModel.php");
         $this->model = new model();
     }
-    public function guardar($titulo, $autor, $descripcion, $isbn, $imagen)
+    public function guardar($titulo)
     {
         $id = $this->model->insertar($titulo);
         return ($id != false) ? header("Location: show.php?id=" . $id) : header("Location: create.php");
@@ -29,5 +29,3 @@ class controller
         return ($this->model->delete($id)) ? header("Location: /codeReaders/index.php") : header("Location: show.php?id=" . $id);
     }
 }
-
-?>
