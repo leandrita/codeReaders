@@ -55,16 +55,14 @@ $date = $obj->show($_GET['id']);
             <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Desea eliminar el registro?</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Una vez eliminado no se podrá recuperar el registro.
+                            Una vez eliminado no se podrá recuperar.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
@@ -107,4 +105,4 @@ $date = $obj->show($_GET['id']);
 
         <?php
         require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php")
-            ?>
+        ?>
