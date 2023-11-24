@@ -2,9 +2,10 @@
 class db
 {
     private $host = "localhost";
-    private $dbname = "BibliotecaPHP";
+    private $dbname = "biblioteca";
     private $user = "root";
     private $password = "root";
+
     public function conection()
     {
         try {
@@ -15,5 +16,3 @@ class db
         }
     }
 }
-
-?>

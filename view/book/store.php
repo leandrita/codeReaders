@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "No se insertó";
         }
 
-        $obj->guardar($titulo, $autor, $descripcion, $isbn, $imagen);
+        $obj->store($titulo, $autor, $descripcion, $isbn, $imagen);
     } else {
         echo "Falló la conexión con la base de datos.";
     }
@@ -37,4 +37,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: /codeReaders/index.php");
     exit();
 }
-?>
