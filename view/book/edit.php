@@ -51,8 +51,7 @@ $user = $obj->show($_GET['id']);
             <div class="mb-3 row">
                 <label for="id" class="col-sm-2 col-form-label">Id</label>
                 <div class="col-sm-10">
-                    <input type="text" name="id" readonly class="form-control-plaintext" id="id"
-                        value="<?= $user[0] ?>">
+                    <input type="text" name="id" readonly class="form-control-plaintext" id="id" value="<?= $user[0] ?>">
                 </div>
             </div>
             <div class="mb-3 row">
@@ -70,8 +69,7 @@ $user = $obj->show($_GET['id']);
             <div class="mb-3 row">
                 <label for="descripcion" class="col-sm-2 col-form-label">Nueva descripción</label>
                 <div class="col-sm-10">
-                    <input type="text" name="descripcion" required class="form-control" value="<?= $user[3] ?>"
-                        id="descripcion">
+                    <input type="text" name="descripcion" required class="form-control" value="<?= $user[3] ?>" id="descripcion">
                 </div>
             </div>
             <div class="mb-3 row">
@@ -88,5 +86,5 @@ $user = $obj->show($_GET['id']);
         </form>
     </div>
     <?php
-    require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php")
-        ?>
+    require_once("/Applications/MAMP/htdocs/codeReaders/view/footer/footer.php")
+    ?>

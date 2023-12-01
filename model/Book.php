@@ -31,6 +31,28 @@ class model
         return ($statement->execute()) ? $statement->fetchAll() : false;
     }
 
+    public function getPaginated($offset, $limit)
+    {
+        try {
+            $db = new db();
+            $con = $db->conection();
+
+            $stmt = $con->prepare("SELECT * FROM codereaders LIMIT :limit OFFSET :offset");
+
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+
+            $stmt->execute();
+
+            $results = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+            return $results;
+        } catch (PDOException $e) {
+            echo "Error en la conexión: " . $e->getMessage();
+            return [];
+        }
+    }
+
     public function update($id, $titulo, $autor, $descripcion, $isbn)
     {
         $statement = $this->PDO->prepare("UPDATE codereaders SET titulo = :titulo, autor = :autor, descripcion = :descripcion, isbn = :isbn WHERE id = :id");

@@ -42,8 +42,7 @@ ini_set('display_errors', 1);
         <form action="/codeReaders/view/book/store.php" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Título</label>
-                <input type="text" name="titulo" required class="form-control" id="exampleInputEmail1"
-                    aria-describedby="emailHelp">
+                <input type="text" name="titulo" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
                 <label for="author">Autor</label>
@@ -55,8 +54,7 @@ ini_set('display_errors', 1);
             </div>
             <div class="form-group">
                 <label for="isbn">ISBN</label>
-                <input type="text" class="form-control" id="isbn" name="isbn" required aria-describedby="isbnHelp"
-                    placeholder="">
+                <input type="text" class="form-control" id="isbn" name="isbn" required aria-describedby="isbnHelp" placeholder="">
                 <small id="isbnHelp" class="form-text text-muted">Introduce únicamente números.</small>
             </div>
             <div class="form-group">
@@ -71,6 +69,6 @@ ini_set('display_errors', 1);
     </div>
 
     <?php
-    require_once("/Applications/MAMP/htdocs/codeReaders/view/head/footer.php");
+    require_once("/Applications/MAMP/htdocs/codeReaders/view/footer/footer.php");
 
     ?>

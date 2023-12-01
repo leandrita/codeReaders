@@ -20,9 +20,12 @@ class controller
         return ($this->model->show($id) != false) ? $this->model->show($id) : header("Location: index.php");
     }
 
-    public function index()
+    public function index($currentPage = 1)
     {
-        return ($this->model->index()) ? $this->model->index() : false;
+        $recordsPerPage = 5;
+        $offset = ($currentPage - 1) * $recordsPerPage;
+
+        return $this->model->getPaginated($offset, $recordsPerPage);
     }
 
     public function update($id, $titulo, $autor, $descripcion, $isbn)
